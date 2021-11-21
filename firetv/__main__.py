@@ -232,7 +232,7 @@ def device_connect(device_id):
 def _parse_config(config_file_path):
     """ Parse Config File from yaml file. """
     config_file = open(config_file_path, 'r')
-    config = yaml.load(config_file)
+    config = yaml.safe_load(config_file)
     config_file.close()
     return config
 
